@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import Button from '../common/Button'
 
 const Test = () => {
@@ -20,13 +20,15 @@ const Test = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Test Component</h1>
-      <p>{counter}</p>
-      <Button onClick={increaseCounter}>
-        Increase
-      </Button>
-    </div>
+    <Fragment>
+      <div>
+        <h1>Test Component</h1>
+        <p>{counter}</p>
+        <Button onClick={increaseCounter}>
+          Increase
+        </Button>
+      </div>
+    </Fragment>
   )
 }
 
